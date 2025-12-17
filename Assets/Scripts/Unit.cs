@@ -26,7 +26,10 @@ public abstract class Unit : MonoBehaviour,
 
     private void Start()
     {
-
+        if (MainMenager.Instance != null)
+        {
+            SetColor(MainMenager.Instance.TeamColor);
+        }
     }
 
     void SetColor(Color c)
